@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.Editor-navBar, .Editor-navBar .Editor-actionContainer{
+    background: red !important;
+}
+
+.Editor-navBar, .Editor-navBar .Editor-actionContainer * {
+    padding: 0px !important;
+}
+
+.VSBottomBar{
+    background: white !important;
+}
