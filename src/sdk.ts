@@ -148,10 +148,9 @@ var h = {
         window.open("https://stackblitz.com/github/" + e + n(t), r(t))
     },
     openProject: function(e, t) {
-        ! function(e, t) {
             var i = u(e);
             i.action = p + n(t), i.target = r(t), document.body.appendChild(i), i.submit(), document.body.removeChild(i)
-        }(e, t)
+       
     },
     openProjectId: function(e, t) {
         window.open("https://stackblitz.com/edit/" + e + n(t), r(t))

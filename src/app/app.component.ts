@@ -34,6 +34,7 @@ export class AppComponent {
     });
   }
 
+
   renderProject(data : any[]){
     console.log(JSON.stringify(data));
     let filenodes = {};
@@ -53,29 +54,25 @@ export class AppComponent {
           template: 'angular-cli',
           tags: ['stackblitz', 'sdk'],
           "dependencies": {
-            "core-js": "^2.4.1",
-            "rxjs": "^5.5.2",
-            "zone.js": "^0.8.14",
-            "@angular/core": "^5.0.0",
-            "@angular/forms": "^5.0.0",
-            "@angular/common": "^5.0.0",
-            "@angular/http": "^5.0.0",
-            "@angular/router": "^5.0.0",
-            "@angular/compiler": "^5.0.0",
-            "@angular/platform-browser": "^5.0.0",
-            "@angular/platform-browser-dynamic": "^5.0.0",
-            "@angular-devkit/core": "^0.6.3",
-            "amexio-ng-extensions": "^4.2.0",
+            "@angular/animations": "~7.0.0",
+            "@angular/common": "~7.0.0",
+            "@angular/compiler": "~7.0.0",
+            "@angular/core": "~7.0.0",
+            "@angular/forms": "~7.0.0",
+            "@angular/http": "~7.0.0",
+            "@angular/platform-browser": "~7.0.0",
+            "@angular/platform-browser-dynamic": "~7.0.0",
+            "@angular/router": "~7.0.0",
+            "amexio-ng-extensions": "^5.4.1",
+            "core-js": "^2.5.4",
+            "rxjs": "~6.3.3",
+            "zone.js": "~0.8.26"            
           }
         };
         sdk.embedProject('vm', project, 
         { 
           'height': 500,
-          'hideDevTools':true,
-          'view' :'preview',
-          'hideExplorer' : '1',
-          'hideNavigation' : '1',
-          'forceEmbedLayout' :'1' 
+          'view' :'preview'
         })
         .then((vm) => {
           this.vm = vm;
@@ -102,7 +99,7 @@ export class AppComponent {
 
     this.vm.applyFsDiff({
       create: {
-        'src/app/app.component.html': `<h1>This was updated programmatically!</h1>`
+        './src/app/app.component.html': `<h1>This was updated programmatically!</h1>`
       }
     });
    
